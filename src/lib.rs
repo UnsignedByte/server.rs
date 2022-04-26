@@ -1,4 +1,5 @@
 pub use rocket;
+pub use rocket_contrib;
 
 pub trait Launch {
     fn new() -> Self;
