@@ -7,5 +7,5 @@ pub trait Launch : Sized {
     fn new <P: AsRef<Path>> (root: P) -> std::io::Result<Self>;
 
     /// mount the launcher onto an app `app` at subpath `path` (consuming).
-    fn mount(self, path: &str, app: rocket::Rocket) -> rocket::Rocket;
+    fn mount<P: AsRef<Path>> (self, path: P, app: rocket::Rocket) -> rocket::Rocket;
 }
